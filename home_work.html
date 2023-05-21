@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MySQL (ORDER BY, LIMIT, DISTINCT)</title>
+</head>
+<body>
+
+    <p>SELECT * FROM shop; SELECT * FROM customer;</p>
+    <img src="/assets/SharedScreenshot.jpg" alt="task 1">
+
+    <p>SELECT category, COUNT(PRODUCT) FROM shop GROUP BY category;</p>
+    <img src="/assets/SharedScreenshot2.jpg" alt="task 2">
+
+    <p>SELECT DISTINCT brand FROM shop;</p>
+    <img src="/assets/SharedScreenshot3.jpg" alt="task 3">
+
+    <p>SELECT name, PRODUCT FROM customer JOIN shop ON customer.productID=shop.id;</p>
+    <img src="/assets/SharedScreenshot4.jpg" alt="task 4">
+
+    <p>SELECT name,PRODUCT,Price, COUNT(PRODUCT) AS Quantity FROM customer JOIN shop ON productID=shop.id GROUP BY name,Product,Price ORDER BY Price DESC;</p>
+    <img src="/assets/SharedScreenshot5.jpg" alt="task 5">
+
+    <p>SELECT category,PRODUCT,Price FROM customer JOIN shop ON customer.productID=shop.id ORDER BY category,Price DESC;</p>
+    <img src="/assets/SharedScreenshot6.jpg" alt="task 6">
+
+</body>
+</html>
